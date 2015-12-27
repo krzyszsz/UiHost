@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SpellingMasterGame/bin/Debug
+/SpellingMasterGame/obj/Debug
+/SpellingMasterUI/bin/Debug
+/SpellingMasterUI/obj/Debug
