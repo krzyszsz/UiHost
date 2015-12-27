@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.Composition;
 using System.Windows.Controls;
+using SpellingMasterCommon.RegionAdapters;
+using SpellingMasterUI.ViewModels;
 
 namespace SpellingMasterUI.Views
 {
@@ -7,11 +9,21 @@ namespace SpellingMasterUI.Views
 	/// Interaction logic for GameRegion.xaml
 	/// </summary>
 	[Export]
-	public partial class GameRegion : UserControl
+	public partial class GameRegion : ITabItemView
 	{
 		public GameRegion()
 		{
 			InitializeComponent();
+		}
+
+		public int Index { get; set; } = 0;
+
+		public bool IsActive { get; set; } = true;
+
+		[Import(typeof(GameViewModel))]
+		public ITabViewModel TabViewModel
+		{
+			set { DataContext = value; }
 		}
 	}
 }
