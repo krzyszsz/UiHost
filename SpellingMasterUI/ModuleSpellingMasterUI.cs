@@ -12,8 +12,8 @@ namespace SpellingMasterUI
 		public void Initialize()
 		{
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
-			regionManager.RegisterViewWithRegion("GameRegion", typeof(GameRegion));
-			regionManager.RegisterViewWithRegion("ScoreRegion", typeof(ScoreRegion));
+			regionManager.RegisterViewWithRegion("TabsRegion", typeof(GameRegion));
+			regionManager.RegisterViewWithRegion("TabsRegion", typeof(ScoreRegion));
 		}
 	}
 }

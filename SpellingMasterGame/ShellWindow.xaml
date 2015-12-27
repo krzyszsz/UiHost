@@ -16,24 +16,17 @@
         </MenuItem>
     </Menu>
 
-    <Grid>
-        <Grid.ColumnDefinitions><ColumnDefinition Width="*"></ColumnDefinition></Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <TabControl Grid.Column="0" Grid.Row="0" x:Name="tabControl" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
-                <TabItem Header="Game">
-                    <StackPanel Background="#FFE5E5E5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-                        <ContentControl x:Name="GameRegion" regions:RegionManager.RegionName="GameRegion" />
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="Scores">
-                <StackPanel Background="#FFE5E5E5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-                    <ContentControl x:Name="ScoreRegion" regions:RegionManager.RegionName="ScoreRegion" />
-                </StackPanel>
-            </TabItem>
-        </TabControl>
+        <Grid>
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*"></ColumnDefinition></Grid.ColumnDefinitions>
 
-    </Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TabControl Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
+                    regions:RegionManager.RegionName="TabsRegion">
+                </TabControl>
+
+        </Grid>
     </DockPanel>
 </Window>

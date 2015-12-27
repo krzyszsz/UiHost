@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterGame", "Spell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterUI", "SpellingMasterUI\SpellingMasterUI.csproj", "{759FD633-DD92-4E60-A90B-FDD3391A1E7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterCommon", "SpellingMasterCommon\SpellingMasterCommon.csproj", "{0C092AAD-1DEA-46A1-860E-7CA2C944109D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{759FD633-DD92-4E60-A90B-FDD3391A1E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{759FD633-DD92-4E60-A90B-FDD3391A1E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{759FD633-DD92-4E60-A90B-FDD3391A1E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C092AAD-1DEA-46A1-860E-7CA2C944109D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C092AAD-1DEA-46A1-860E-7CA2C944109D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C092AAD-1DEA-46A1-860E-7CA2C944109D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C092AAD-1DEA-46A1-860E-7CA2C944109D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
