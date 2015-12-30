@@ -1,5 +1,3 @@
-using SpellingMasterUI.ViewModels;
-
 namespace SpellingMasterCommon.RegionAdapters
 {
 	public interface ITabItemView

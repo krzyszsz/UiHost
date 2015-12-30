@@ -1,4 +1,4 @@
-namespace SpellingMasterUI.ViewModels
+namespace SpellingMasterCommon.RegionAdapters
 {
 	public interface ITabViewModel
 	{

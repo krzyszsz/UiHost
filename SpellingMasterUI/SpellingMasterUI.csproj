@@ -139,9 +139,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\SpellingMasterCommon\SpellingMasterCommon.csproj">
+    <ProjectReference Include="..\CommonLibUi\CommonLibUi.csproj">
       <Project>{0c092aad-1dea-46a1-860e-7ca2c944109d}</Project>
-      <Name>SpellingMasterCommon</Name>
+      <Name>CommonLibUi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
