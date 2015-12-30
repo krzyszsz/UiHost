@@ -27,7 +27,7 @@ namespace SpellingMasterCommon.RegionAdapters
 				return;
 			var items = _regionTarget.Items;
 
-			foreach (ITabItemView tab in e.NewItems)
+			foreach (ITabItemView tab in e.NewItems.Cast<ITabItemView>().OrderBy(it => it.Index))
 			{
 				if (tab.Index > items.Count)
 					items.Add(tab);
@@ -37,7 +37,8 @@ namespace SpellingMasterCommon.RegionAdapters
 				if (tab.IsActive)
 				{
 					_regionTarget.SelectedItem = tab;
-					foreach (var tabItemView in items.SourceCollection.Cast<ITabItemView>().Where(it => it != tab))
+					foreach (var tabItemView in items.SourceCollection.Cast<ITabItemView>()
+						.Where(it => it != tab))
 					{
 						tabItemView.IsActive = false;
 					}

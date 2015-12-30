@@ -1,18 +1,14 @@
 ﻿using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.IO;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using Microsoft.Practices.Prism.PubSubEvents;
 using Microsoft.Practices.Prism.Regions;
-using Microsoft.Practices.Prism.Regions.Behaviors;
 using Microsoft.Practices.ServiceLocation;
-using Prism.Logging;
+using Prism.Interactivity.InteractionRequest;
 using Prism.Mef;
 using Prism.Modularity;
+using SpellingMasterCommon.Dialogs;
 using SpellingMasterCommon.RegionAdapters;
-using SpellingMasterUI;
 
 namespace SpellingMasterGame
 {
@@ -38,7 +34,12 @@ namespace SpellingMasterGame
 
 		protected override DependencyObject CreateShell()
 		{
-			return new ShellWindow();
+			var q = new InteractionRequest<INotification>();
+			var dialogService = new DialogService(q);
+			Container.ComposeExportedValue(dialogService);
+			var shell = new ShellWindow { ViewModel = new ShellWindowViewModel(dialogService, q) };
+			Container.ComposeExportedValue(shell);
+			return shell;
 		}
 
 		protected override void InitializeShell()
@@ -50,13 +51,10 @@ namespace SpellingMasterGame
 		protected override void ConfigureContainer()
 		{
 			base.ConfigureContainer();
-			//ServiceLocator.SetLocatorProvider(() => new MefServiceLocatorAdapter(Container));
-
 			Container.ComposeExportedValue<IRegionManager>(new RegionManager());
-			//var mappings = ConfigureRegionAdapterMappings();
-			//Container.ComposeExportedValue<Prism.Regions.RegionAdapterMappings>(mappings);
 			Container.ComposeExportedValue<IRegionViewRegistry>(new RegionViewRegistry(Container.GetExportedValue<IServiceLocator>()));
 			Container.ComposeExportedValue(new TabControlRegionAdapter(Container.GetExportedValue<Prism.Regions.IRegionBehaviorFactory>()));
+			Container.ComposeExportedValue(new MenuItemRegionAdapter(Container.GetExportedValue<Prism.Regions.IRegionBehaviorFactory>()));
 		}
 
 		protected override Prism.Regions.RegionAdapterMappings ConfigureRegionAdapterMappings()
