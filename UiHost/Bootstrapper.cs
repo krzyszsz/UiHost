@@ -14,9 +14,6 @@ namespace UiHost
 {
 	public class Bootstrapper : MefBootstrapper
 	{
-		// TODO: Line below: direct reference to the module is not desired
-		// TODO: Need to add msbuild task to copy all modules
-
 		protected override void ConfigureAggregateCatalog()
 		{
 			AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(Bootstrapper).Assembly));

@@ -149,10 +149,6 @@
       <Project>{0c092aad-1dea-46a1-860e-7ca2c944109d}</Project>
       <Name>CommonLibUi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SpellingMasterUI\SpellingMasterUI.csproj">
-      <Project>{759fd633-dd92-4e60-a90b-fdd3391a1e7f}</Project>
-      <Name>SpellingMasterUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
