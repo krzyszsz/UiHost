@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.Composition;
-using SpellingMasterCommon.RegionAdapters;
+using CommonLibUi.RegionAdapters;
 using SpellingMasterUI.ViewModels;
 
 namespace SpellingMasterUI.Views

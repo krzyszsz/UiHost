@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Prism.Interactivity.InteractionRequest;
 
-namespace SpellingMasterCommon.Dialogs
+namespace CommonLibUi.Dialogs
 {
 	public class DialogService : IDialogService
 	{

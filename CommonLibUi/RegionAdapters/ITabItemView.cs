@@ -1,4 +1,4 @@
-namespace SpellingMasterCommon.RegionAdapters
+namespace CommonLibUi.RegionAdapters
 {
 	public interface ITabItemView
 	{

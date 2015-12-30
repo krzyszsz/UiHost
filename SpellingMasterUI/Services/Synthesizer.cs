@@ -5,7 +5,7 @@ using System.Linq;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.Threading.Tasks;
-using SpellingMasterGame;
+using UiHost;
 
 namespace SpellingMasterUI.Services
 {

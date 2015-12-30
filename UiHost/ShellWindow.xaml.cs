@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SpellingMasterGame
+namespace UiHost
 {
 	// TODO: Extract interface of this ViewModel & View for loose-coupling
 	/// <summary>

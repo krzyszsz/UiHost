@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using System.Windows.Controls;
-using SpellingMasterCommon.RegionAdapters;
+using CommonLibUi.RegionAdapters;
 using SpellingMasterUI.ViewModels;
 
 namespace SpellingMasterUI.Views

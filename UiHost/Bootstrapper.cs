@@ -2,15 +2,15 @@
 using System.ComponentModel.Composition.Hosting;
 using System.Windows;
 using System.Windows.Controls;
+using CommonLibUi.Dialogs;
+using CommonLibUi.RegionAdapters;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mef;
 using Prism.Modularity;
-using SpellingMasterCommon.Dialogs;
-using SpellingMasterCommon.RegionAdapters;
 
-namespace SpellingMasterGame
+namespace UiHost
 {
 	public class Bootstrapper : MefBootstrapper
 	{

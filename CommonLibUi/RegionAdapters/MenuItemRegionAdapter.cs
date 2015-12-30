@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using Microsoft.Practices.Prism.Commands;
 using Prism.Regions;
 
-namespace SpellingMasterCommon.RegionAdapters
+namespace CommonLibUi.RegionAdapters
 {
 	public class MenuItemRegionAdapter : RegionAdapterBase<MenuItem>
 	{

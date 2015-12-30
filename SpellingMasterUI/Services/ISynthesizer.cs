@@ -1,4 +1,4 @@
-namespace SpellingMasterGame
+namespace UiHost
 {
 	public interface ISynthesizer
 	{
