@@ -15,18 +15,18 @@ namespace SpellingMasterUI
 		{
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
 			// Below: registering tabs
-			regionManager.RegisterViewWithRegion("TabsRegion", typeof(GameRegion));
-			regionManager.RegisterViewWithRegion("TabsRegion", typeof(ScoreRegion));
+			regionManager.RegisterViewWithRegion("TabsRegion", typeof(GameTab));
+			regionManager.RegisterViewWithRegion("TabsRegion", typeof(ScoresTab));
 			// Below: registering menuItems
-			regionManager.RegisterViewWithRegion("MenuRegion", typeof(ScoreMenuItem));
+			regionManager.RegisterViewWithRegion("MenuRegion", typeof(ScoresMenuItem));
 		}
 
 		[Export]
-		public class ScoreMenuItem : MenuItem
+		public class ScoresMenuItem : MenuItem
 		{
-			public ScoreMenuItem()
+			public ScoresMenuItem()
 			{
-				Header = "_Score";
+				Header = "_Scores";
 			}
 		}
 

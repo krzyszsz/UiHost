@@ -14,12 +14,8 @@ namespace SpellingMasterGame
 {
 	public class Bootstrapper : MefBootstrapper
 	{
-		//protected override void ConfigureAggregateCatalog()
-		//{
-		//	// TODO: Line below: direct reference to the module is not desired
-		//	AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ModuleSpellingMasterUi).Assembly));
-		//	base.ConfigureAggregateCatalog();
-		//}
+		// TODO: Line below: direct reference to the module is not desired
+		// TODO: Need to add msbuild task to copy all modules
 
 		protected override void ConfigureAggregateCatalog()
 		{

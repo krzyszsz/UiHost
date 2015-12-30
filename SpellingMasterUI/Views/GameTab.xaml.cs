@@ -6,12 +6,12 @@ using SpellingMasterUI.ViewModels;
 namespace SpellingMasterUI.Views
 {
 	/// <summary>
-	/// Interaction logic for GameRegion.xaml
+	/// Interaction logic for GameTab.xaml
 	/// </summary>
 	[Export]
-	public partial class GameRegion : ITabItemView
+	public partial class GameTab : ITabItemView
 	{
-		public GameRegion()
+		public GameTab()
 		{
 			InitializeComponent();
 		}

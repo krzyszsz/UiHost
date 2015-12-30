@@ -109,11 +109,11 @@
     <Compile Include="Services\Synthesizer.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\ScoresViewModel.cs" />
-    <Compile Include="Views\GameRegion.xaml.cs">
-      <DependentUpon>GameRegion.xaml</DependentUpon>
+    <Compile Include="Views\GameTab.xaml.cs">
+      <DependentUpon>GameTab.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ScoreRegion.xaml.cs">
-      <DependentUpon>ScoreRegion.xaml</DependentUpon>
+    <Compile Include="Views\ScoresTab.xaml.cs">
+      <DependentUpon>ScoresTab.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,11 +128,11 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\GameRegion.xaml">
+    <Page Include="Views\GameTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ScoreRegion.xaml">
+    <Page Include="Views\ScoresTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
