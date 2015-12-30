@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterGame", "SpellingMasterGame\SpellingMasterGame.csproj", "{28B118C0-BBAB-4F95-87AF-FC36470FF4B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiHost", "UiHost\UiHost.csproj", "{28B118C0-BBAB-4F95-87AF-FC36470FF4B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterUI", "SpellingMasterUI\SpellingMasterUI.csproj", "{759FD633-DD92-4E60-A90B-FDD3391A1E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterCommon", "SpellingMasterCommon\SpellingMasterCommon.csproj", "{0C092AAD-1DEA-46A1-860E-7CA2C944109D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibUi", "CommonLibUi\CommonLibUi.csproj", "{0C092AAD-1DEA-46A1-860E-7CA2C944109D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

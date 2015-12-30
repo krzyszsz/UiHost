@@ -19,6 +19,7 @@ namespace SpellingMasterUI
 			regionManager.RegisterViewWithRegion("TabsRegion", typeof(ScoresTab));
 			// Below: registering menuItems
 			regionManager.RegisterViewWithRegion("MenuRegion", typeof(ScoresMenuItem));
+			regionManager.RegisterViewWithRegion("MenuRegion", typeof(GameMenuItem));
 		}
 
 		[Export]

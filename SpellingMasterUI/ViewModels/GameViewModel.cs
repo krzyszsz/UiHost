@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.ViewModel;
+using SpellingMasterCommon.RegionAdapters;
 
 namespace SpellingMasterUI.ViewModels
 {
