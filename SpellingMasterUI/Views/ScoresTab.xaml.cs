@@ -5,12 +5,12 @@ using SpellingMasterUI.ViewModels;
 namespace SpellingMasterUI.Views
 {
 	/// <summary>
-	/// Interaction logic for ScoreRegion.xaml
+	/// Interaction logic for ScoresTab.xaml
 	/// </summary>
 	[Export]
-	public partial class ScoreRegion : ITabItemView
+	public partial class ScoresTab : ITabItemView
 	{
-		public ScoreRegion()
+		public ScoresTab()
 		{
 			InitializeComponent();
 		}

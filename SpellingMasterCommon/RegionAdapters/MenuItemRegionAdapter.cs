@@ -27,10 +27,11 @@ namespace SpellingMasterCommon.RegionAdapters
 			if (e.Action != NotifyCollectionChangedAction.Add)
 				return;
 			var items = _regionTarget.Items;
+			var initialNumberOfItems = items.Count;
 
 			foreach (MenuItem tab in e.NewItems)
 			{
-				items.Add(tab);
+				items.Insert(items.Count - initialNumberOfItems, tab);
 			}
 		}
 
