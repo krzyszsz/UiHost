@@ -5,18 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpellingMasterGame"
         xmlns:regions="http://prismlibrary.com/"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="ShellWindow" Height="350" Width="525">
     <DockPanel>
-    <Menu DockPanel.Dock="Top">
-        <MenuItem Header="_File">
-            <MenuItem Header="_Open"/>
-            <MenuItem Header="_Close"/>
-            <MenuItem Header="_Save"/>
-        </MenuItem>
+        <!--<Button >
+            --><!--<TextBox Text="{Binding StrTst, Mode=OneWay}"/>-->
+            <!--<regions:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+                <regions:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
+            </regions:InteractionRequestTrigger>--><!--
+        </Button>-->
+
+        <i:Interaction.Triggers>
+            <regions:InteractionRequestTrigger SourceObject="{Binding InteractionRequest, Mode=OneWay}">
+                <regions:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
+            </regions:InteractionRequestTrigger>
+        </i:Interaction.Triggers>
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Menu" regions:RegionManager.RegionName="MenuRegion">
+                <Separator />
+                <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>
+            </MenuItem>
     </Menu>
 
         <Grid>
+            
                 <Grid.ColumnDefinitions><ColumnDefinition Width="*"></ColumnDefinition></Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>

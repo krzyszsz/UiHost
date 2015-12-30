@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 
 namespace SpellingMasterGame
 {
+	// TODO: Extract interface of this ViewModel & View for loose-coupling
 	/// <summary>
 	/// Interaction logic for ShellWindow.xaml
 	/// </summary>
@@ -26,6 +27,15 @@ namespace SpellingMasterGame
 		public ShellWindow()
 		{
 			InitializeComponent();
+		}
+
+		public ShellWindowViewModel ViewModel
+		{
+			set
+			{
+				DataContext = value;
+				value.Shell = this;
+			}
 		}
 	}
 }
