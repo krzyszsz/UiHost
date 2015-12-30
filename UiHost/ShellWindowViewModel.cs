@@ -3,9 +3,9 @@ using System.Windows.Input;
 using Prism.Commands;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Mvvm;
-using SpellingMasterCommon.Dialogs;
+using CommonLibUi.Dialogs;
 
-namespace SpellingMasterGame
+namespace UiHost
 {
 	// TODO: Extract interface of this ViewModel & View for loose-coupling
 	public class ShellWindowViewModel : BindableBase

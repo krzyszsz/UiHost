@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace SpellingMasterCommon.Dialogs
+namespace CommonLibUi.Dialogs
 {
 	public interface IDialogService
 	{

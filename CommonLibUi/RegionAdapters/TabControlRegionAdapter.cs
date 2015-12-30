@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Controls;
 using Prism.Regions;
 
-namespace SpellingMasterCommon.RegionAdapters
+namespace CommonLibUi.RegionAdapters
 {
 	public class TabControlRegionAdapter : RegionAdapterBase<TabControl>
 	{

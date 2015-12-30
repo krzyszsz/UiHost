@@ -8,8 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using log4net.Config;
+using UiHost;
 
-namespace SpellingMasterGame
+namespace UiHost
 {
 	/// <summary>
 	/// Interaction logic for App.xaml
