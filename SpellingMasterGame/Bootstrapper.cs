@@ -61,6 +61,7 @@ namespace SpellingMasterGame
 		{
 			var regionAdapterMappings = base.ConfigureRegionAdapterMappings();
 			regionAdapterMappings.RegisterMapping(typeof(TabControl), ServiceLocator.Current.GetInstance<TabControlRegionAdapter>());
+			regionAdapterMappings.RegisterMapping(typeof(MenuItem), ServiceLocator.Current.GetInstance<MenuItemRegionAdapter>());
 			return regionAdapterMappings;
 		}
 

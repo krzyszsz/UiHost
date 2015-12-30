@@ -9,13 +9,6 @@
         mc:Ignorable="d"
         Title="ShellWindow" Height="350" Width="525">
     <DockPanel>
-        <!--<Button >
-            --><!--<TextBox Text="{Binding StrTst, Mode=OneWay}"/>-->
-            <!--<regions:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
-                <regions:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
-            </regions:InteractionRequestTrigger>--><!--
-        </Button>-->
-
         <i:Interaction.Triggers>
             <regions:InteractionRequestTrigger SourceObject="{Binding InteractionRequest, Mode=OneWay}">
                 <regions:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"/>
@@ -27,7 +20,7 @@
                 <Separator />
                 <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>
             </MenuItem>
-    </Menu>
+        </Menu>
 
         <Grid>
             
