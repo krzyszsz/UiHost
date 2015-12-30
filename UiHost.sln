@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellingMasterUI", "Spellin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibUi", "CommonLibUi\CommonLibUi.csproj", "{0C092AAD-1DEA-46A1-860E-7CA2C944109D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{492E5D71-23BC-4DB5-A045-E6FFB1808A99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{759FD633-DD92-4E60-A90B-FDD3391A1E7F} = {492E5D71-23BC-4DB5-A045-E6FFB1808A99}
 	EndGlobalSection
 EndGlobal
