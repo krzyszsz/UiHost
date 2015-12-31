@@ -149,6 +149,10 @@
       <Project>{0c092aad-1dea-46a1-860e-7ca2c944109d}</Project>
       <Name>CommonLibUi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{2f1efe16-4d30-4afe-af56-d14c7545a6d7}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
