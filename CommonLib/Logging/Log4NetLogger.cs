@@ -1,13 +1,13 @@
 ﻿using log4net;
-using Microsoft.Practices.Prism.Logging;
+using Prism.Logging;
 
 namespace CommonLib.Logging
 {
-	class Log4NetLogger : ILoggerFacade
+	public class Log4NetLogger : ILoggerFacade
 	{
 		private readonly ILog _logger = LogManager.GetLogger(typeof(Log4NetLogger));
 
-		public void Log(string message, Category category, Priority priority)
+		public void Log(string message, Category category = Category.Info, Priority priority = Priority.None)
 		{
 			switch (category)
 			{

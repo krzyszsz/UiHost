@@ -2,11 +2,13 @@
 using System.ComponentModel.Composition.Hosting;
 using System.Windows;
 using System.Windows.Controls;
+using CommonLib.Logging;
 using CommonLibUi.Dialogs;
 using CommonLibUi.RegionAdapters;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Logging;
 using Prism.Mef;
 using Prism.Modularity;
 
@@ -58,9 +60,9 @@ namespace UiHost
 			return regionAdapterMappings;
 		}
 
-		//protected override ILoggerFacade CreateLogger()
-		//{
-		//	return new Log4NetLogger(); // todo
-		//}
+		protected override ILoggerFacade CreateLogger()
+		{
+			return new Log4NetLogger();
+		}
 	}
 }
