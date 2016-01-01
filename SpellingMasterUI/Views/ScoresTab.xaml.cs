@@ -7,6 +7,7 @@ namespace SpellingMasterUI.Views
 	/// <summary>
 	/// Interaction logic for ScoresTab.xaml
 	/// </summary>
+	//[Export("ScoresTab", typeof(ScoresTab))]
 	[Export]
 	public partial class ScoresTab : ITabItemView
 	{
