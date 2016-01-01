@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using CommonLib.Logging;
 using CommonLibUi.Dialogs;
 using CommonLibUi.RegionAdapters;
+using CommonLibUi.WaitingService;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
@@ -23,18 +24,33 @@ namespace UiHost
 
 		protected override IModuleCatalog CreateModuleCatalog()
 		{
+			base.CreateModuleCatalog();
 			var moduleCatalog = new DirectoryModuleCatalog {ModulePath = @"."};
 			return moduleCatalog;
 		}
 
 		protected override DependencyObject CreateShell()
 		{
-			var q = new InteractionRequest<INotification>();
-			var dialogService = new DialogService(q);
-			Container.ComposeExportedValue(dialogService);
-			var shell = new ShellWindow { ViewModel = new ShellWindowViewModel(dialogService, q) };
+			var dialogService = Container.GetExportedValue<IDialogService>();
+			var waitingService = Container.GetExportedValue<IWaitingService>();
+			var interactionRequest = Container.GetExportedValue<InteractionRequest<INotification>>();
+			var shell = new ShellWindow { ViewModel = new ShellWindowViewModel(dialogService, interactionRequest, waitingService) };
 			Container.ComposeExportedValue(shell);
 			return shell;
+		}
+
+		private void RegisterDialogService()
+		{
+			var interactionRequest = new InteractionRequest<INotification>();
+			var dialogService = new DialogService(interactionRequest);
+			Container.ComposeExportedValue(interactionRequest);
+			Container.ComposeExportedValue<IDialogService>(dialogService);
+		}
+
+		private void RegisterWaitingService()
+		{
+			var waitingService = new WaitingService();
+			Container.ComposeExportedValue<IWaitingService>(waitingService);
 		}
 
 		protected override void InitializeShell()
@@ -50,6 +66,8 @@ namespace UiHost
 			Container.ComposeExportedValue<IRegionViewRegistry>(new RegionViewRegistry(Container.GetExportedValue<IServiceLocator>()));
 			Container.ComposeExportedValue(new TabControlRegionAdapter(Container.GetExportedValue<Prism.Regions.IRegionBehaviorFactory>()));
 			Container.ComposeExportedValue(new MenuItemRegionAdapter(Container.GetExportedValue<Prism.Regions.IRegionBehaviorFactory>()));
+			RegisterDialogService();
+			RegisterWaitingService();
 		}
 
 		protected override Prism.Regions.RegionAdapterMappings ConfigureRegionAdapterMappings()
