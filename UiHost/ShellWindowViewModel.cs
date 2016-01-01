@@ -12,6 +12,8 @@ namespace UiHost
 	{
 		private readonly IDialogService _dialogService;
 		private readonly InteractionRequest<INotification> _interactionRequest;
+		private string _waitingMessage;
+		private bool _isBusy;
 
 		public ShellWindowViewModel(IDialogService dialogService, InteractionRequest<INotification> interactionRequest)
 		{
@@ -23,6 +25,32 @@ namespace UiHost
 		public InteractionRequest<INotification> InteractionRequest => _interactionRequest;
 
 		public ICommand ExitCommand { get; private set; }
+
+		public string WaitingMessage
+		{
+			get
+			{
+				return _waitingMessage;
+			}
+			set
+			{
+				_waitingMessage = value;
+				OnPropertyChanged(() => WaitingMessage);
+			}
+		}
+
+		public bool IsBusy
+		{
+			get
+			{
+				return _isBusy;
+			}
+			set
+			{
+				_isBusy = value;
+				OnPropertyChanged(() => IsBusy);
+			}
+		}
 
 		public ShellWindow Shell { get; set; }
 
