@@ -1,4 +1,7 @@
-﻿using CommonLibUi;
+﻿using System.ComponentModel.Composition;
+using System.Threading.Tasks;
+using CommonLibUi;
+using CommonLibUi.WaitingService;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Mef.Modularity;
 using Prism.Modularity;
@@ -10,7 +13,15 @@ namespace SpellingMasterUI
 	[ModuleExport("ModuleSpellingMasterUi", typeof(ModuleSpellingMasterUi))]
 	public class ModuleSpellingMasterUi : IModule
 	{
-		public void Initialize()
+		private readonly IWaitingService _waitingService;
+
+		[ImportingConstructor]
+		public ModuleSpellingMasterUi(IWaitingService waitingService)
+		{
+			_waitingService = waitingService;
+		}
+
+		public async void Initialize()
 		{
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
 			// Below: registering tabs
@@ -19,6 +30,8 @@ namespace SpellingMasterUI
 			// Below: registering menuItems
 			regionManager.RegisterViewWithRegion(RegionNames.Menu, typeof(RegisteredMenuItems.ScoresMenuItem));
 			regionManager.RegisterViewWithRegion(RegionNames.Menu, typeof(RegisteredMenuItems.GameMenuItem));
+
+			await _waitingService.ExecuteLongTask(Task.Delay(500));
 		}
 	}
 }

@@ -114,6 +114,9 @@
     <Compile Include="RegionAdapters\MenuItemRegionAdapter.cs" />
     <Compile Include="RegionAdapters\TabControlRegionAdapter.cs" />
     <Compile Include="RegionNames.cs" />
+    <Compile Include="WaitingService\IWaitingService.cs" />
+    <Compile Include="WaitingService\IWaitingViewModel.cs" />
+    <Compile Include="WaitingService\WaitingService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
