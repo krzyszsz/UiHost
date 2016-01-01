@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Composition;
-using System.Windows.Controls;
+﻿using CommonLibUi;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Mef.Modularity;
 using Prism.Modularity;
@@ -15,29 +14,11 @@ namespace SpellingMasterUI
 		{
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
 			// Below: registering tabs
-			regionManager.RegisterViewWithRegion("TabsRegion", typeof(GameTab));
-			regionManager.RegisterViewWithRegion("TabsRegion", typeof(ScoresTab));
+			regionManager.RegisterViewWithRegion(RegionNames.Tabs, typeof(GameTab));
+			regionManager.RegisterViewWithRegion(RegionNames.Tabs, typeof(ScoresTab));
 			// Below: registering menuItems
-			regionManager.RegisterViewWithRegion("MenuRegion", typeof(ScoresMenuItem));
-			regionManager.RegisterViewWithRegion("MenuRegion", typeof(GameMenuItem));
-		}
-
-		[Export]
-		public class ScoresMenuItem : MenuItem
-		{
-			public ScoresMenuItem()
-			{
-				Header = "_Scores";
-			}
-		}
-
-		[Export]
-		public class GameMenuItem : MenuItem
-		{
-			public GameMenuItem()
-			{
-				Header = "_Game";
-			}
+			regionManager.RegisterViewWithRegion(RegionNames.Menu, typeof(RegisteredMenuItems.ScoresMenuItem));
+			regionManager.RegisterViewWithRegion(RegionNames.Menu, typeof(RegisteredMenuItems.GameMenuItem));
 		}
 	}
 }
